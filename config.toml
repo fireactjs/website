@@ -1,6 +1,10 @@
 baseURL = 'https://fireactjs.com/'
 languageCode = 'en-us'
 title = 'Fireactjs'
+# Language settings
+contentDir = "content/en"
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = false
 [module]
 proxy = "direct"
 [[module.imports]]
