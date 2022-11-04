@@ -10,9 +10,34 @@ linkTitle = "Home"
 	<a class="btn btn-lg btn-secondary mr-3 mb-4" href="https://demo.fireactjs.com" target="_blank">
 		Live Demo <i class="fas fa-arrow-alt-circle-right ml-2 "></i>
 	</a>
-	<p class="lead mt-4">The fully customisable framework for building SaaS and user portals with Firebase and Reactjs in minutes</p>
 	<div class="mx-auto mt-5">
-		{{< blocks/link-down color="secondary" >}}
+		{{< blocks/link-down color="warning" >}}
 	</div>
 </div>
 {{< /blocks/cover >}}
+
+{{< blocks/lead color="warning" >}}
+<p><b>What is Fireactjs?</b></p>
+
+<p>Fireactjs is an open-source framework for building SaaS and user portals with Firebase and Reactjs. The framework is designed to be component-based, so it can be extensible and customizable by adding or replacing custom-built components.</p>
+{{< /blocks/lead >}}
+
+{{< blocks/section color="prmiary" >}}
+{{% blocks/feature icon="fas fa-file-code" title="Orchestrate Game Servers" url="./docs/getting-started/" %}}
+Define and manage groups of ready gameservers through YAML configuration or API calls.
+{{% /blocks/feature %}}
+
+{{% blocks/feature icon="fas fa-wrench" title="Integrate any Engine" url="./docs/guides/client-sdks/" %}}
+Integrated SDK for managing game server lifecycle, health and configuration.
+
+Tools for local development included!
+{{% /blocks/feature %}}
+
+
+{{% blocks/feature icon="fas fa-chart-area" title="Metrics and Monitoring" url="./docs/guides/metrics/" %}}
+Integration with [OpenCensus](https://opencensus.io/)
+for platform-independent game server metrics and monitoring dashboards
+{{% /blocks/feature %}}
+
+
+{{< /blocks/section >}}
