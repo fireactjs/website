@@ -1,5 +1,5 @@
 ---
-title: "Fireactjs Prerequisite Knowledge"
+title: "Prerequisite Knowledge"
 linkTitle: Prerequisite Knowledge
 weight: 40
 description: >
