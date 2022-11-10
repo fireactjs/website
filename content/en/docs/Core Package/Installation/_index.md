@@ -1,7 +1,7 @@
 ---
 title: "Installation"
 linkTitle: Installation
-weight: 80
+weight: 100
 description: >
   Instructions for installing Fireactjs and creating your Reactjs application with the Fireactjs framework.
 ---

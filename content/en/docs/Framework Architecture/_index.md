@@ -1,7 +1,7 @@
 ---
 title: "Framework Architecture"
 linkTitle: Framework Architecture
-weight: 100
+weight: 80
 description: >
   Fireactjs is designed to be extensible and customizable with its framework architecture.
 ---
