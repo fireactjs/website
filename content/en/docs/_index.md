@@ -1,10 +1,10 @@
 ---
 title: "Fireactjs Documentation"
 linkTitle: Documentation
-weight: 20
+weight: 40
 menu:
   main:
-    weight: 20
+    weight: 40
 description: >
   Documentation and usage guides on how to develop web applications with Fireactjs.
 ---
