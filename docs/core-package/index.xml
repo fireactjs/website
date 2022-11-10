@@ -1,0 +1,174 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Fireactjs – @fireactjs/core Package</title><link>https://fireactjs.com/docs/core-package/</link><description>Recent content in @fireactjs/core Package on Fireactjs</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><atom:link href="https://fireactjs.com/docs/core-package/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Installation</title><link>https://fireactjs.com/docs/core-package/installation/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://fireactjs.com/docs/core-package/installation/</guid><description>
+&lt;h2 id="install-from-npm">Install from NPM&lt;/h2>
+&lt;p>To install the fireactjs-core components, create your Reactjs project first, and then run &lt;code>npm I @fireactjs/core&lt;/code> to install the components.&lt;/p>
+&lt;pre tabindex="0">&lt;code>npx create-react-app my-app
+cd my-app
+npm i @fireactjs/core @mui/material @emotion/react @emotion/styled
+&lt;/code>&lt;/pre>&lt;p>For details on how to create a Reactjs application, please see &lt;a href="https://reactjs.org/docs/create-a-new-react-app.html">https://reactjs.org/docs/create-a-new-react-app.html&lt;/a>&lt;/p>
+&lt;h2 id="setup-your-firebase-project">Setup your Firebase project&lt;/h2>
+&lt;p>As @fireactjs/core is built on Firebase and Reactjs, you will need to have a Firebase project. Go to &lt;a href="https://firebase.google.com/">the Firebase website&lt;/a> and create a project.&lt;/p>
+&lt;h3 id="create-a-web-app">Create a web app&lt;/h3>
+&lt;p>In your Firebase Project settings → General, click the “Add app” button to create a new web app. You will the instructions on installing the firebase npm package and a JSON configuration named &lt;code>firebaseConfig&lt;/code> which you will need to configure your @fireactjs application.&lt;/p>
+&lt;p>Create a file called &lt;code>firebaseConfig.json&lt;/code> in the &lt;code>/src&lt;/code> folder and copy the &lt;code>firebaseConfig&lt;/code> JSON to the file similar to the format below.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-json" data-lang="json">&lt;span style="display:flex;">&lt;span>{
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;apiKey&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;...&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;authDomain&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;...&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;projectId&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;...&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;storageBucket&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;...&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;messagingSenderId&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;...&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;appId&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;...&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="enable-authentication-methods">Enable authentication methods&lt;/h3>
+&lt;p>After you create your Firebase project, go to the project console and enable the authentication methods you plan to use for your web application. @fireactjs/core supports the following authentication methods:&lt;/p>
+&lt;ul>
+&lt;li>Email and password&lt;/li>
+&lt;li>Google&lt;/li>
+&lt;li>Facebook&lt;/li>
+&lt;li>Microsoft&lt;/li>
+&lt;li>Twitter&lt;/li>
+&lt;li>Github&lt;/li>
+&lt;li>Apple&lt;/li>
+&lt;/ul>
+&lt;p>Some of the authentication methods require you to register your web application in the authentication platforms (e.g. Facebook). Please make sure you complete the necessary steps to enable the authentication methods.&lt;/p>
+&lt;p>Create a file called &lt;code>authMethods.json&lt;/code> in the &lt;code>/src&lt;/code> folder and copy the following JSON to the file, then set the authentication methods that you enabled to &lt;code>true&lt;/code> otherwise to &lt;code>false&lt;/code>.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-json" data-lang="json">&lt;span style="display:flex;">&lt;span>{
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;google&amp;#34;&lt;/span>: &lt;span style="color:#66d9ef">true&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;facebook&amp;#34;&lt;/span>: &lt;span style="color:#66d9ef">true&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;microsoft&amp;#34;&lt;/span>: &lt;span style="color:#66d9ef">true&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;apple&amp;#34;&lt;/span>: &lt;span style="color:#66d9ef">true&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;twitter&amp;#34;&lt;/span>: &lt;span style="color:#66d9ef">true&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;github&amp;#34;&lt;/span>: &lt;span style="color:#66d9ef">true&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="initialize-your-firebase-project">Initialize your Firebase project&lt;/h3>
+&lt;p>Run &lt;code>firebase login&lt;/code> to sign in to your Firebase account and then run &lt;code>firebase init&lt;/code> to initialize your Firebase project locally.&lt;/p>
+&lt;h3 id="update-firestore-rules">Update Firestore rules&lt;/h3>
+&lt;p>Update your &lt;code>firebase.rules&lt;/code> with the code below.&lt;/p>
+&lt;pre tabindex="0">&lt;code>rules_version = &amp;#39;2&amp;#39;;
+service cloud.firestore {
+match /databases/{database}/documents {
+match /{document=**} {
+allow read, write: if false;
+}
+match /users/{userId} {
+allow read, update, create: if request.auth.uid == userId;
+}
+}
+}
+&lt;/code>&lt;/pre>&lt;h2 id="modify-appjs">Modify App.js&lt;/h2>
+&lt;p>Replace the code in your &lt;code>src/App.js&lt;/code> with the code below.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-jsx" data-lang="jsx">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">import&lt;/span> &lt;span style="color:#e6db74">&amp;#39;./App.css&amp;#39;&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">import&lt;/span> &lt;span style="color:#a6e22e">firebaseConfig&lt;/span> &lt;span style="color:#a6e22e">from&lt;/span> &lt;span style="color:#e6db74">&amp;#34;./firebaseConfig.json&amp;#34;&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">import&lt;/span> { &lt;span style="color:#a6e22e">pathnames&lt;/span>, &lt;span style="color:#a6e22e">AppTemplate&lt;/span>, &lt;span style="color:#a6e22e">AuthProvider&lt;/span>, &lt;span style="color:#a6e22e">AuthRoutes&lt;/span>, &lt;span style="color:#a6e22e">MainMenu&lt;/span>, &lt;span style="color:#a6e22e">PublicTemplate&lt;/span>, &lt;span style="color:#a6e22e">ResetPassword&lt;/span>, &lt;span style="color:#a6e22e">SignIn&lt;/span>, &lt;span style="color:#a6e22e">SignUp&lt;/span>, &lt;span style="color:#a6e22e">UserMenu&lt;/span>, &lt;span style="color:#a6e22e">UserProfile&lt;/span>, &lt;span style="color:#a6e22e">UserUpdateEmail&lt;/span>, &lt;span style="color:#a6e22e">UserUpdateName&lt;/span>, &lt;span style="color:#a6e22e">UserUpdatePassword&lt;/span>, &lt;span style="color:#a6e22e">UserDelete&lt;/span> } &lt;span style="color:#a6e22e">from&lt;/span> &lt;span style="color:#e6db74">&amp;#39;@fireactjs/core&amp;#39;&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">import&lt;/span> { &lt;span style="color:#a6e22e">BrowserRouter&lt;/span>, &lt;span style="color:#a6e22e">Routes&lt;/span> } &lt;span style="color:#a6e22e">from&lt;/span> &lt;span style="color:#e6db74">&amp;#34;react-router-dom&amp;#34;&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">import&lt;/span> { &lt;span style="color:#a6e22e">Route&lt;/span> } &lt;span style="color:#a6e22e">from&lt;/span> &lt;span style="color:#e6db74">&amp;#34;react-router-dom&amp;#34;&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">import&lt;/span> &lt;span style="color:#a6e22e">LocalFireDepartmentIcon&lt;/span> &lt;span style="color:#a6e22e">from&lt;/span> &lt;span style="color:#e6db74">&amp;#39;@mui/icons-material/LocalFireDepartment&amp;#39;&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">import&lt;/span> { &lt;span style="color:#a6e22e">CircularProgress&lt;/span>, &lt;span style="color:#a6e22e">Box&lt;/span> } &lt;span style="color:#a6e22e">from&lt;/span> &lt;span style="color:#e6db74">&amp;#39;@mui/material&amp;#39;&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">import&lt;/span> &lt;span style="color:#a6e22e">authMethods&lt;/span> &lt;span style="color:#a6e22e">from&lt;/span> &lt;span style="color:#e6db74">&amp;#34;./authMethods.json&amp;#34;&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">const&lt;/span> &lt;span style="color:#a6e22e">Brand&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#e6db74">&amp;#34;FIREACT&amp;#34;&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">const&lt;/span> &lt;span style="color:#a6e22e">Logo&lt;/span> &lt;span style="color:#f92672">=&lt;/span> ({&lt;span style="color:#a6e22e">size&lt;/span>, &lt;span style="color:#a6e22e">color&lt;/span>}) =&amp;gt; {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">const&lt;/span> &lt;span style="color:#a6e22e">logoColor&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#a6e22e">color&lt;/span> &lt;span style="color:#f92672">||&lt;/span> &lt;span style="color:#e6db74">&amp;#39;warning&amp;#39;&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">return&lt;/span> (
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &amp;lt;&lt;span style="color:#f92672">LocalFireDepartmentIcon&lt;/span> &lt;span style="color:#a6e22e">color&lt;/span>&lt;span style="color:#f92672">=&lt;/span>{&lt;span style="color:#a6e22e">logoColor&lt;/span>} &lt;span style="color:#a6e22e">fontSize&lt;/span>&lt;span style="color:#f92672">=&lt;/span>{&lt;span style="color:#a6e22e">size&lt;/span>} /&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> );
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">const&lt;/span> &lt;span style="color:#a6e22e">Loader&lt;/span> &lt;span style="color:#f92672">=&lt;/span> ({&lt;span style="color:#a6e22e">size&lt;/span>}) =&amp;gt; {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">let&lt;/span> &lt;span style="color:#a6e22e">cpSize&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#e6db74">&amp;#34;35px&amp;#34;&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">switch&lt;/span>(&lt;span style="color:#a6e22e">size&lt;/span>){
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">case&lt;/span> &lt;span style="color:#e6db74">&amp;#34;small&amp;#34;&lt;/span>&lt;span style="color:#f92672">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">cpSize&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#e6db74">&amp;#34;30px&amp;#34;&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">break&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">case&lt;/span> &lt;span style="color:#e6db74">&amp;#34;medium&amp;#34;&lt;/span>&lt;span style="color:#f92672">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">cpSize&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#e6db74">&amp;#34;35px&amp;#34;&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">break&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">case&lt;/span> &lt;span style="color:#e6db74">&amp;#34;large&amp;#34;&lt;/span>&lt;span style="color:#f92672">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">cpSize&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#e6db74">&amp;#34;45px&amp;#34;&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">break&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">default&lt;/span>&lt;span style="color:#f92672">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">cpSize&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#e6db74">&amp;#34;35px&amp;#34;&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">break&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">return&lt;/span> (
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &amp;lt;&lt;span style="color:#f92672">Box&lt;/span> &lt;span style="color:#a6e22e">sx&lt;/span>&lt;span style="color:#f92672">=&lt;/span>{{ &lt;span style="color:#a6e22e">display&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#e6db74">&amp;#39;flex&amp;#39;&lt;/span>, &lt;span style="color:#a6e22e">justifyContent&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#e6db74">&amp;#34;center&amp;#34;&lt;/span>, &lt;span style="color:#a6e22e">alignItems&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#e6db74">&amp;#34;center&amp;#34;&lt;/span>}}&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &amp;lt;&lt;span style="color:#f92672">CircularProgress&lt;/span> &lt;span style="color:#a6e22e">color&lt;/span>&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#e6db74">&amp;#34;warning&amp;#34;&lt;/span> &lt;span style="color:#a6e22e">size&lt;/span>&lt;span style="color:#f92672">=&lt;/span>{&lt;span style="color:#a6e22e">cpSize&lt;/span>} /&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &amp;lt;&lt;span style="color:#f92672">div&lt;/span> &lt;span style="color:#a6e22e">style&lt;/span>&lt;span style="color:#f92672">=&lt;/span>{{&lt;span style="color:#a6e22e">position&lt;/span>&lt;span style="color:#f92672">:&lt;/span> &lt;span style="color:#e6db74">&amp;#34;absolute&amp;#34;&lt;/span> }}&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &amp;lt;&lt;span style="color:#f92672">Logo&lt;/span> &lt;span style="color:#a6e22e">size&lt;/span>&lt;span style="color:#f92672">=&lt;/span>{&lt;span style="color:#a6e22e">size&lt;/span>} /&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &amp;lt;/&lt;span style="color:#f92672">div&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &amp;lt;/&lt;span style="color:#f92672">Box&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> );
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">function&lt;/span> &lt;span style="color:#a6e22e">App&lt;/span>() {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">return&lt;/span> (
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &amp;lt;&lt;span style="color:#f92672">AuthProvider&lt;/span> &lt;span style="color:#a6e22e">firebaseConfig&lt;/span>&lt;span style="color:#f92672">=&lt;/span>{&lt;span style="color:#a6e22e">firebaseConfig&lt;/span>} &lt;span style="color:#a6e22e">brand&lt;/span>&lt;span style="color:#f92672">=&lt;/span>{&lt;span style="color:#a6e22e">Brand&lt;/span>}&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &amp;lt;&lt;span style="color:#f92672">BrowserRouter&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &amp;lt;&lt;span style="color:#f92672">Routes&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &amp;lt;&lt;span style="color:#f92672">Route&lt;/span> &lt;span style="color:#a6e22e">element&lt;/span>&lt;span style="color:#f92672">=&lt;/span>{&amp;lt;&lt;span style="color:#f92672">AuthRoutes&lt;/span> &lt;span style="color:#a6e22e">signInPath&lt;/span>&lt;span style="color:#f92672">=&lt;/span>{&lt;span style="color:#a6e22e">pathnames&lt;/span>.&lt;span style="color:#a6e22e">SignIn&lt;/span>} &lt;span style="color:#a6e22e">loader&lt;/span>&lt;span style="color:#f92672">=&lt;/span>{&amp;lt;&lt;span style="color:#f92672">Loader&lt;/span> &lt;span style="color:#a6e22e">size&lt;/span>&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#e6db74">&amp;#34;large&amp;#34;&lt;/span> /&amp;gt;} /&amp;gt;} &amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &amp;lt;&lt;span style="color:#f92672">Route&lt;/span> &lt;span style="color:#a6e22e">element&lt;/span>&lt;span style="color:#f92672">=&lt;/span>{&amp;lt;&lt;span style="color:#f92672">AppTemplate&lt;/span> &lt;span style="color:#a6e22e">logo&lt;/span>&lt;span style="color:#f92672">=&lt;/span>{&amp;lt;&lt;span style="color:#f92672">Logo&lt;/span> &lt;span style="color:#a6e22e">size&lt;/span>&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#e6db74">&amp;#34;large&amp;#34;&lt;/span> /&amp;gt;}
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">brand&lt;/span>&lt;span style="color:#f92672">=&lt;/span>{&lt;span style="color:#a6e22e">Brand&lt;/span>}
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">toolBarMenu&lt;/span>&lt;span style="color:#f92672">=&lt;/span>{&amp;lt;&lt;span style="color:#f92672">UserMenu&lt;/span> &lt;span style="color:#a6e22e">pathnames&lt;/span>&lt;span style="color:#f92672">=&lt;/span>{&lt;span style="color:#a6e22e">pathnames&lt;/span>} /&amp;gt;}
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">drawerMenu&lt;/span>&lt;span style="color:#f92672">=&lt;/span>{&amp;lt;&lt;span style="color:#f92672">MainMenu&lt;/span> &lt;span style="color:#a6e22e">pathnames&lt;/span>&lt;span style="color:#f92672">=&lt;/span>{&lt;span style="color:#a6e22e">pathnames&lt;/span>} /&amp;gt;} /&amp;gt;}&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &amp;lt;&lt;span style="color:#f92672">Route&lt;/span> &lt;span style="color:#a6e22e">exact&lt;/span> &lt;span style="color:#a6e22e">path&lt;/span>&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#e6db74">&amp;#34;/&amp;#34;&lt;/span> &lt;span style="color:#a6e22e">element&lt;/span>&lt;span style="color:#f92672">=&lt;/span>{&amp;lt;&amp;gt;&amp;lt;/&amp;gt;} /&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &amp;lt;&lt;span style="color:#f92672">Route&lt;/span> &lt;span style="color:#a6e22e">exact&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">path&lt;/span>&lt;span style="color:#f92672">=&lt;/span>{&lt;span style="color:#a6e22e">pathnames&lt;/span>.&lt;span style="color:#a6e22e">UserProfile&lt;/span>}
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">element&lt;/span>&lt;span style="color:#f92672">=&lt;/span>{&amp;lt;&lt;span style="color:#f92672">UserProfile&lt;/span> &lt;span style="color:#a6e22e">pathnames&lt;/span>&lt;span style="color:#f92672">=&lt;/span>{&lt;span style="color:#a6e22e">pathnames&lt;/span>} /&amp;gt;}
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> /&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &amp;lt;&lt;span style="color:#f92672">Route&lt;/span> &lt;span style="color:#a6e22e">exact&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">path&lt;/span>&lt;span style="color:#f92672">=&lt;/span>{&lt;span style="color:#a6e22e">pathnames&lt;/span>.&lt;span style="color:#a6e22e">UserUpdateEmail&lt;/span>}
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">element&lt;/span>&lt;span style="color:#f92672">=&lt;/span>{&amp;lt;&lt;span style="color:#f92672">UserUpdateEmail&lt;/span> &lt;span style="color:#a6e22e">pathnames&lt;/span>&lt;span style="color:#f92672">=&lt;/span>{&lt;span style="color:#a6e22e">pathnames&lt;/span>} /&amp;gt;}
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> /&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &amp;lt;&lt;span style="color:#f92672">Route&lt;/span> &lt;span style="color:#a6e22e">exact&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">path&lt;/span>&lt;span style="color:#f92672">=&lt;/span>{&lt;span style="color:#a6e22e">pathnames&lt;/span>.&lt;span style="color:#a6e22e">UserUpdateName&lt;/span>}
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">element&lt;/span>&lt;span style="color:#f92672">=&lt;/span>{&amp;lt;&lt;span style="color:#f92672">UserUpdateName&lt;/span> &lt;span style="color:#a6e22e">pathnames&lt;/span>&lt;span style="color:#f92672">=&lt;/span>{&lt;span style="color:#a6e22e">pathnames&lt;/span>} /&amp;gt;}
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> /&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &amp;lt;&lt;span style="color:#f92672">Route&lt;/span> &lt;span style="color:#a6e22e">exact&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">path&lt;/span>&lt;span style="color:#f92672">=&lt;/span>{&lt;span style="color:#a6e22e">pathnames&lt;/span>.&lt;span style="color:#a6e22e">UserUpdatePassword&lt;/span>}
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">element&lt;/span>&lt;span style="color:#f92672">=&lt;/span>{&amp;lt;&lt;span style="color:#f92672">UserUpdatePassword&lt;/span> &lt;span style="color:#a6e22e">pathnames&lt;/span>&lt;span style="color:#f92672">=&lt;/span>{&lt;span style="color:#a6e22e">pathnames&lt;/span>} /&amp;gt;}
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> /&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &amp;lt;&lt;span style="color:#f92672">Route&lt;/span> &lt;span style="color:#a6e22e">exact&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">path&lt;/span>&lt;span style="color:#f92672">=&lt;/span>{&lt;span style="color:#a6e22e">pathnames&lt;/span>.&lt;span style="color:#a6e22e">UserDelete&lt;/span>}
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">element&lt;/span>&lt;span style="color:#f92672">=&lt;/span>{&amp;lt;&lt;span style="color:#f92672">UserDelete&lt;/span> &lt;span style="color:#a6e22e">pathnames&lt;/span>&lt;span style="color:#f92672">=&lt;/span>{&lt;span style="color:#a6e22e">pathnames&lt;/span>} /&amp;gt;}
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> /&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &amp;lt;/&lt;span style="color:#f92672">Route&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &amp;lt;/&lt;span style="color:#f92672">Route&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &amp;lt;&lt;span style="color:#f92672">Route&lt;/span> &lt;span style="color:#a6e22e">element&lt;/span>&lt;span style="color:#f92672">=&lt;/span>{&amp;lt;&lt;span style="color:#f92672">PublicTemplate&lt;/span> /&amp;gt;}&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &amp;lt;&lt;span style="color:#f92672">Route&lt;/span> &lt;span style="color:#a6e22e">path&lt;/span>&lt;span style="color:#f92672">=&lt;/span>{&lt;span style="color:#a6e22e">pathnames&lt;/span>.&lt;span style="color:#a6e22e">SignIn&lt;/span>} &lt;span style="color:#a6e22e">element&lt;/span>&lt;span style="color:#f92672">=&lt;/span>{
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &amp;lt;&lt;span style="color:#f92672">SignIn&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">logo&lt;/span>&lt;span style="color:#f92672">=&lt;/span>{&amp;lt;&lt;span style="color:#f92672">Logo&lt;/span> &lt;span style="color:#a6e22e">size&lt;/span>&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#e6db74">&amp;#34;large&amp;#34;&lt;/span> /&amp;gt;}
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">pathnames&lt;/span>&lt;span style="color:#f92672">=&lt;/span>{&lt;span style="color:#a6e22e">pathnames&lt;/span>}
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">providers&lt;/span>&lt;span style="color:#f92672">=&lt;/span>{&lt;span style="color:#a6e22e">authMethods&lt;/span>}
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> /&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> } /&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &amp;lt;&lt;span style="color:#f92672">Route&lt;/span> &lt;span style="color:#a6e22e">path&lt;/span>&lt;span style="color:#f92672">=&lt;/span>{&lt;span style="color:#a6e22e">pathnames&lt;/span>.&lt;span style="color:#a6e22e">SignUp&lt;/span>} &lt;span style="color:#a6e22e">element&lt;/span>&lt;span style="color:#f92672">=&lt;/span>{
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &amp;lt;&lt;span style="color:#f92672">SignUp&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">logo&lt;/span>&lt;span style="color:#f92672">=&lt;/span>{&amp;lt;&lt;span style="color:#f92672">Logo&lt;/span> &lt;span style="color:#a6e22e">size&lt;/span>&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#e6db74">&amp;#34;large&amp;#34;&lt;/span> /&amp;gt;}
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">pathnames&lt;/span>&lt;span style="color:#f92672">=&lt;/span>{&lt;span style="color:#a6e22e">pathnames&lt;/span>}
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> /&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> } /&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &amp;lt;&lt;span style="color:#f92672">Route&lt;/span> &lt;span style="color:#a6e22e">path&lt;/span>&lt;span style="color:#f92672">=&lt;/span>{&lt;span style="color:#a6e22e">pathnames&lt;/span>.&lt;span style="color:#a6e22e">ResetPassword&lt;/span>} &lt;span style="color:#a6e22e">element&lt;/span>&lt;span style="color:#f92672">=&lt;/span>{
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &amp;lt;&lt;span style="color:#f92672">ResetPassword&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">logo&lt;/span>&lt;span style="color:#f92672">=&lt;/span>{&amp;lt;&lt;span style="color:#f92672">Logo&lt;/span> &lt;span style="color:#a6e22e">size&lt;/span>&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#e6db74">&amp;#34;large&amp;#34;&lt;/span> /&amp;gt;}
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">pathnames&lt;/span>&lt;span style="color:#f92672">=&lt;/span>{&lt;span style="color:#a6e22e">pathnames&lt;/span>}
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> /&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> } /&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &amp;lt;/&lt;span style="color:#f92672">Route&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &amp;lt;/&lt;span style="color:#f92672">Routes&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &amp;lt;/&lt;span style="color:#f92672">BrowserRouter&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &amp;lt;/&lt;span style="color:#f92672">AuthProvider&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> )
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">export&lt;/span> &lt;span style="color:#66d9ef">default&lt;/span> &lt;span style="color:#a6e22e">App&lt;/span>;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Replace &lt;code>Brand&lt;/code> and &lt;code>Logo&lt;/code> to customise the logo and the brand of your web application.&lt;/p>
+&lt;p>For further customisation, please read the documentation.&lt;/p>
+&lt;h2 id="run-your-app-locally">Run your app locally&lt;/h2>
+&lt;p>By now, your app is ready for the first run locally. Use the command &lt;code>npm start&lt;/code> to start the app.&lt;/p>
+&lt;h2 id="deploy-to-firebase">Deploy to Firebase&lt;/h2>
+&lt;p>After testing locally, your app is ready to be deployed to Firebase hosting.&lt;/p>
+&lt;h3 id="build">Build&lt;/h3>
+&lt;p>Run &lt;code>npm run build&lt;/code> to build your app&lt;/p>
+&lt;h3 id="deploy">Deploy&lt;/h3>
+&lt;p>Run &lt;code>firebase init&lt;/code> to initialize your project with Firebase and then run &lt;code>firebase deploy&lt;/code> to deploy your app to Firebase. If you see a blank screen in your production URL, make sure you set the &lt;code>build&lt;/code> as the folder in your Firebase settings.&lt;/p></description></item><item><title>Docs: Components</title><link>https://fireactjs.com/docs/core-package/components/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://fireactjs.com/docs/core-package/components/</guid><description/></item></channel></rss>
