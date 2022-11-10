@@ -13,3 +13,6 @@ path = "github.com/google/docsy"
 path = "github.com/google/docsy/dependencies"
 [params]
 github_repo = "https://github.com/fireactjs/website"
+#Enable offline search with Lunr.js
+offlineSearch = true
+offlineSearchSummaryLength = 200
