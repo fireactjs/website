@@ -16,3 +16,11 @@ github_repo = "https://github.com/fireactjs/website"
 #Enable offline search with Lunr.js
 offlineSearch = true
 offlineSearchSummaryLength = 200
+copyright = "The Fireactjs Team"
+github_project_repo = "https://github.com/fireactjs/core"
+
+[[params.links.developer]]
+  name = "GitHub"
+  url = "https://github.com/fireactjs/core"
+  icon = "fab fa-github"
+  desc = "Development takes place here!"
