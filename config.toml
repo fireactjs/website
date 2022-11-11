@@ -12,6 +12,7 @@ path = "github.com/google/docsy"
 [[module.imports]]
 path = "github.com/google/docsy/dependencies"
 [params]
+images = ['https://fireactjs.com/fireactjs_laptop.png']
 description = 'Fireactjs is an open-source framework for building SaaS and user portals with Firebase and Reactjs.'
 github_repo = "https://github.com/fireactjs/website"
 #Enable offline search with Lunr.js
