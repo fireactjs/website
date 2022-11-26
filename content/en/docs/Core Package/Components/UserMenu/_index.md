@@ -17,7 +17,6 @@ UserMenu is the menu at the top-right of the toolbar for the current user to man
 
 | Prop Name | Description |
 | --- | --- |
-| pathnames | The JSON contains the components and their path names for navigation links |
 | customItems | An array of menu item elements to be inserted between Profile and Sign Out options. |
 
 ## Source Code

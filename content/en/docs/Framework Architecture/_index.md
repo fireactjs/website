@@ -98,9 +98,9 @@ Here is an example of the default `pathnames.json` file from the framework.
 
 ## FireactProvider component
 
-This is the component to provide the configurations as a context variable. The `config` property is a JSON object that you can extend its properties. At minimum, the `config` JSON object must contain the following properties:
+This is the component to provide the configurations as a context variable. The `config` property is a JSON object that you can extend its properties. At a minimum, the `config` JSON object must contain the following properties:
 
-- `firebaseConfig` - the configurations about your Firebase project
+- `firebaseConfig` - the configurations of your Firebase project
 - `brand` - the brand name of your project
 - `pathnames` - the components and their path names as described above
 - `authProviders` - the configurations of the authentication providers

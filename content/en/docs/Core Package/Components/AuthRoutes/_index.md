@@ -13,7 +13,6 @@ AuthRoutes is the component to check the current user sign-in state. If the user
 
 | Prop Name | Description |
 | --- | --- |
-| signInPath | The pathname of the sign-in page |
 | loader | This is the loader component to be displayed when the application is loading user sign-in state data |
 
 ## Source Code

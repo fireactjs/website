@@ -13,12 +13,6 @@ UserProfile is a component to display the user profile information such as avata
 
 ![Screenshot](screenshot.png)
 
-## Props
-
-| Prop Name | Description |
-| --- | --- |
-| pathnames | The JSON contains the components and their path names for navigation links |
-
 ## Source Code
 
 [https://github.com/fireactjs/core/blob/main/src/lib/components/user/UserProfile.js](https://github.com/fireactjs/core/blob/main/src/lib/components/user/UserProfile.js)

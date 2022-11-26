@@ -18,7 +18,6 @@ ResetPassword is a form component for users to input their emails to request a p
 | Prop Name | Description |
 | --- | --- |
 | logo | This is the logo component to be displayed at the top of the form |
-| pathnames | The JSON contains the components and their path names for navigation links |
 
 ## Source Code
 

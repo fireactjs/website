@@ -18,7 +18,6 @@ SignUp is the form component for users to sign up for new accounts with email an
 | Prop Name | Description |
 | --- | --- |
 | logo | This is the logo component to be displayed at the top of the form |
-| pathnames | The JSON contains the components and their path names for navigation links |
 | successUrl | The URL to redirect users to after signing up. If no successUrl is provided, the sign up process will redirect users back to the homepage after signing up. |
 
 ## Source Code
