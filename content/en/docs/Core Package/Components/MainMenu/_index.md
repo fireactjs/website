@@ -13,6 +13,12 @@ MainMenu is the component to display the menu in the left sidebar of the applica
 
 ![Screenshot](screenshot.png)
 
+## Props
+
+| Prop Name | Description |
+| --- | --- |
+| customItems | An array of menu item elements to be inserted between Home and My Profile options. |
+
 ## Source Code
 
 [https://github.com/fireactjs/core/blob/main/src/lib/components/menus/MainMenu.js](https://github.com/fireactjs/core/blob/main/src/lib/components/menus/MainMenu.js)
