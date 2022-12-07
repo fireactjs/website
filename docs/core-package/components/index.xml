@@ -1,4 +1,8 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Fireactjs – Components</title><link>https://fireactjs.com/docs/core-package/components/</link><description>Recent content in Components on Fireactjs</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><atom:link href="https://fireactjs.com/docs/core-package/components/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: AppTemplate</title><link>https://fireactjs.com/docs/core-package/components/apptemplate/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://fireactjs.com/docs/core-package/components/apptemplate/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Fireactjs – Components</title><link>https://fireactjs.com/docs/core-package/components/</link><description>Recent content in Components on Fireactjs</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><atom:link href="https://fireactjs.com/docs/core-package/components/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: ActionPages</title><link>https://fireactjs.com/docs/core-package/components/actionpages/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://fireactjs.com/docs/core-package/components/actionpages/</guid><description>
+&lt;h2 id="overview">Overview&lt;/h2>
+&lt;p>This component powers the action pages including reset password, verify email and restore email, which are Firebase authentication templates. The default pathname of these pages is &lt;code>/auth-action&lt;/code>. To customise your Firebase templates, go to your Firebase project authentication → Templates, then click on the Edit Template button, and then click on “Customize action URL”. Use &lt;code>https://www.yourdomain.com/auth-action&lt;/code> as the custom action URL and replace &lt;code>www.yourdomain.com&lt;/code> with your actual application domain.&lt;/p>
+&lt;h2 id="source-code">Source Code&lt;/h2>
+&lt;p>&lt;a href="https://github.com/fireactjs/core/blob/main/src/lib/components/auth/ActionPages.js">https://github.com/fireactjs/core/blob/main/src/lib/components/auth/ActionPages.js&lt;/a>&lt;/p></description></item><item><title>Docs: AppTemplate</title><link>https://fireactjs.com/docs/core-package/components/apptemplate/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://fireactjs.com/docs/core-package/components/apptemplate/</guid><description>
 &lt;h2 id="overview">Overview&lt;/h2>
 &lt;p>AppTemplate is a template component that controls the layout of the logged-in state of your application. It has a few props for customizing the interface such as your logo and brand name, menu etc. Below is a screenshot of the component and the positions of the props.&lt;/p>
 &lt;h2 id="screenshot">Screenshot&lt;/h2>
@@ -110,6 +114,21 @@
 &lt;p>MainMenu is the component to display the menu in the left sidebar of the application layout. By default, it contains two menu items: Application Home and User Profile. You can extend the menu by replacing the component with your own component.&lt;/p>
 &lt;h2 id="screenshot">Screenshot&lt;/h2>
 &lt;p>&lt;img src="screenshot.png" alt="Screenshot">&lt;/p>
+&lt;h2 id="props">Props&lt;/h2>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Prop Name&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>customItems&lt;/td>
+&lt;td>An array of menu item elements to be inserted between Home and My Profile options.&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
 &lt;h2 id="source-code">Source Code&lt;/h2>
 &lt;p>&lt;a href="https://github.com/fireactjs/core/blob/main/src/lib/components/menus/MainMenu.js">https://github.com/fireactjs/core/blob/main/src/lib/components/menus/MainMenu.js&lt;/a>&lt;/p></description></item><item><title>Docs: PublicTemplate</title><link>https://fireactjs.com/docs/core-package/components/publictemplate/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://fireactjs.com/docs/core-package/components/publictemplate/</guid><description>
 &lt;h2 id="overview">Overview&lt;/h2>
