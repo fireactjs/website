@@ -1,0 +1,233 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Fireactjs – Components</title><link>https://fireactjs.com/docs/saas-package/components/</link><description>Recent content in Components on Fireactjs</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><atom:link href="https://fireactjs.com/docs/saas-package/components/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: AddUser</title><link>https://fireactjs.com/docs/saas-package/components/adduser/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://fireactjs.com/docs/saas-package/components/adduser/</guid><description>
+&lt;h2 id="overview">Overview&lt;/h2>
+&lt;p>Each subscription account can have multiple users. This is the component to invite new and existing users of the system to access the subscription account with the assigned permission roles.&lt;/p>
+&lt;h2 id="screenshot">Screenshot&lt;/h2>
+&lt;p>&lt;img src="screenshot.png" alt="Screenshot">&lt;/p>
+&lt;h2 id="props">Props&lt;/h2>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Prop Name&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>setAddUserActive&lt;/td>
+&lt;td>The state of AddUser component is loaded in the parent component. Set false to unload the component.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>setUsers&lt;/td>
+&lt;td>The state of the user list in the parent component. After a user is invited, the user will be appended to the users state.&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h2 id="source-code">Source Code&lt;/h2>
+&lt;p>&lt;a href="https://github.com/fireactjs/saas/blob/main/src/lib/components/AddUser.js">https://github.com/fireactjs/saas/blob/main/src/lib/components/AddUser.js&lt;/a>&lt;/p></description></item><item><title>Docs: CancelSubscription</title><link>https://fireactjs.com/docs/saas-package/components/cancelsubscription/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://fireactjs.com/docs/saas-package/components/cancelsubscription/</guid><description>
+&lt;h2 id="overview">Overview&lt;/h2>
+&lt;p>This is the component to confirm and cancel the subscription account. It requires the admin user of the subscription account to input the subscription ID to confirm before cancelling the subscription, to avoid cancellation by mistake.&lt;/p>
+&lt;h2 id="screenshot">Screenshot&lt;/h2>
+&lt;p>&lt;img src="screenshot.png" alt="Screenshot">&lt;/p>
+&lt;h2 id="source-code">Source Code&lt;/h2>
+&lt;p>&lt;a href="https://github.com/fireactjs/saas/blob/main/src/lib/components/CancelSubscription.js">https://github.com/fireactjs/saas/blob/main/src/lib/components/CancelSubscription.js&lt;/a>&lt;/p></description></item><item><title>Docs: ChangePlan</title><link>https://fireactjs.com/docs/saas-package/components/changeplan/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://fireactjs.com/docs/saas-package/components/changeplan/</guid><description>
+&lt;h2 id="overview">Overview&lt;/h2>
+&lt;p>This is the component to show the subscription plans with the &lt;code>PricingPlans&lt;/code> component for the owner of the subscription account to change the subscription plan. If a payment method is attached to the subscription account, the component will change the subscription with the attached payment method, otherwise, it will show the &lt;code>PaymentMethodForm&lt;/code> component to set up the payment method for the subscription.&lt;/p>
+&lt;h2 id="screenshot">Screenshot&lt;/h2>
+&lt;p>&lt;img src="screenshot1.png" alt="Screenshot">&lt;/p>
+&lt;p>&lt;img src="screenshot2.png" alt="Screenshot">&lt;/p>
+&lt;h2 id="source-code">Source Code&lt;/h2>
+&lt;p>&lt;a href="https://github.com/fireactjs/saas/blob/main/dist/components/ChangePlan.js">https://github.com/fireactjs/saas/blob/main/dist/components/ChangePlan.js&lt;/a>&lt;/p></description></item><item><title>Docs: CreateSubscription</title><link>https://fireactjs.com/docs/saas-package/components/createsubscription/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://fireactjs.com/docs/saas-package/components/createsubscription/</guid><description>
+&lt;h2 id="overview">Overview&lt;/h2>
+&lt;p>This component shows the subscription plans with the &lt;code>PricingPlans&lt;/code> component. If the chosen plan is a paid plan, it loads the &lt;code>PaymentMethodForm&lt;/code> component to set up the payment method for the subscription account. Once the subscription account is created, it redirects the user to the subscription settings page.&lt;/p>
+&lt;h2 id="screenshot">Screenshot&lt;/h2>
+&lt;p>&lt;img src="screenshot1.png" alt="Screenshot">&lt;/p>
+&lt;p>&lt;img src="screenshot2.png" alt="Screenshot">&lt;/p>
+&lt;h2 id="source-code">Source Code&lt;/h2>
+&lt;p>&lt;a href="https://github.com/fireactjs/saas/blob/main/dist/components/CreateSubscription.js">https://github.com/fireactjs/saas/blob/main/dist/components/CreateSubscription.js&lt;/a>&lt;/p></description></item><item><title>Docs: ListInvoices</title><link>https://fireactjs.com/docs/saas-package/components/listinvoices/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://fireactjs.com/docs/saas-package/components/listinvoices/</guid><description>
+&lt;h2 id="overview">Overview&lt;/h2>
+&lt;p>This is the component to list the invoices of the subscription account. It also links to Update Payment Method, Change Plan and Cancel Subscription features.&lt;/p>
+&lt;h2 id="screenshot">Screenshot&lt;/h2>
+&lt;p>&lt;img src="screenshot.png" alt="Screenshot">&lt;/p>
+&lt;h2 id="props">Props&lt;/h2>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Prop Name&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>loader&lt;/td>
+&lt;td>This is the loader component to be displayed when the application is loading the invoice data&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h2 id="source-code">Source Code&lt;/h2>
+&lt;p>&lt;a href="https://github.com/fireactjs/saas/blob/main/dist/components/ListInvoices.js">https://github.com/fireactjs/saas/blob/main/dist/components/ListInvoices.js&lt;/a>&lt;/p></description></item><item><title>Docs: ListSubscriptions</title><link>https://fireactjs.com/docs/saas-package/components/listsubscriptions/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://fireactjs.com/docs/saas-package/components/listsubscriptions/</guid><description>
+&lt;h2 id="overview">Overview&lt;/h2>
+&lt;p>This component lists the subscription accounts the current user has access. It also links to the feature to create a new subscription account.&lt;/p>
+&lt;h2 id="screenshot">Screenshot&lt;/h2>
+&lt;p>&lt;img src="screenshot.png" alt="Screenshot">&lt;/p>
+&lt;h2 id="props">Props&lt;/h2>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Prop Name&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>loader&lt;/td>
+&lt;td>This is the loader component to be displayed when the application is loading the subscriptions data&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h2 id="source-code">Source Code&lt;/h2>
+&lt;p>&lt;a href="https://github.com/fireactjs/saas/blob/main/dist/components/ListSubscriptions.js">https://github.com/fireactjs/saas/blob/main/dist/components/ListSubscriptions.js&lt;/a>&lt;/p></description></item><item><title>Docs: ListUsers</title><link>https://fireactjs.com/docs/saas-package/components/listusers/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://fireactjs.com/docs/saas-package/components/listusers/</guid><description>
+&lt;h2 id="overview">Overview&lt;/h2>
+&lt;p>This component lists the users of the subscription account, including the pending users who are invited to the account. It links to the Invite User feature.&lt;/p>
+&lt;h2 id="props">Props&lt;/h2>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Prop Name&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>loader&lt;/td>
+&lt;td>This is the loader component to be displayed when the application is loading the user data&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h2 id="source-code">Source Code&lt;/h2>
+&lt;p>&lt;a href="https://github.com/fireactjs/saas/blob/main/dist/components/ListUsers.js">https://github.com/fireactjs/saas/blob/main/dist/components/ListUsers.js&lt;/a>&lt;/p></description></item><item><title>Docs: ManagePaymentMethods</title><link>https://fireactjs.com/docs/saas-package/components/managepaymentmethods/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://fireactjs.com/docs/saas-package/components/managepaymentmethods/</guid><description>
+&lt;h2 id="overview">Overview&lt;/h2>
+&lt;p>This is the component to list the existing payment methods of the user. Click “Set Default” to attach the payment method to the current subscription account. Click “Remove” to remove the payment method from the user. If the payment method is attached to a subscription account, removal will return an error.&lt;/p>
+&lt;p>Add payment method feature will load the &lt;code>PaymentMethodForm&lt;/code> component to add a new payment method and attach it to the current subscription account.&lt;/p>
+&lt;h2 id="screenshot">Screenshot&lt;/h2>
+&lt;p>&lt;img src="screenshot.png" alt="Screenshot">&lt;/p>
+&lt;h2 id="props">Props&lt;/h2>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Prop Name&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>loader&lt;/td>
+&lt;td>This is the loader component to be displayed when the application is loading the payment methods data&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h2 id="source-code">Source Code&lt;/h2>
+&lt;p>&lt;a href="https://github.com/fireactjs/saas/blob/main/dist/components/ManagePaymentMethods.js">https://github.com/fireactjs/saas/blob/main/dist/components/ManagePaymentMethods.js&lt;/a>&lt;/p></description></item><item><title>Docs: PermissionRouter</title><link>https://fireactjs.com/docs/saas-package/components/permissionrouter/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://fireactjs.com/docs/saas-package/components/permissionrouter/</guid><description>
+&lt;h2 id="overview">Overview&lt;/h2>
+&lt;p>This component checks whether the current user has permissions in the &lt;code>permissions&lt;/code> prop. It is designed to be used with the &lt;code>&amp;lt;Route /&amp;gt;&lt;/code> component as the parent route of nested routes. For example, the code below will make the nested route only accessible for the &lt;code>access&lt;/code> permission role.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-jsx" data-lang="jsx">&lt;span style="display:flex;">&lt;span>&amp;lt;&lt;span style="color:#f92672">Route&lt;/span> &lt;span style="color:#a6e22e">element&lt;/span>&lt;span style="color:#f92672">=&lt;/span>{&amp;lt;&lt;span style="color:#f92672">PermissionRouter&lt;/span> &lt;span style="color:#a6e22e">permissions&lt;/span>&lt;span style="color:#f92672">=&lt;/span>{[&lt;span style="color:#e6db74">&amp;#34;access&amp;#34;&lt;/span>]} /&amp;gt;} &amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &amp;lt;&lt;span style="color:#f92672">Route&lt;/span> &lt;span style="color:#a6e22e">exact&lt;/span> &lt;span style="color:#a6e22e">path&lt;/span>&lt;span style="color:#f92672">=&lt;/span>{&lt;span style="color:#a6e22e">pathnames&lt;/span>.&lt;span style="color:#a6e22e">Subscription&lt;/span>&lt;span style="color:#f92672">+&lt;/span>&lt;span style="color:#e6db74">&amp;#34;/&amp;#34;&lt;/span>} &lt;span style="color:#a6e22e">element&lt;/span>&lt;span style="color:#f92672">=&lt;/span>{&amp;lt;&lt;span style="color:#f92672">div&lt;/span>&amp;gt;&lt;span style="color:#a6e22e">Home&lt;/span>&amp;lt;/&lt;span style="color:#f92672">div&lt;/span>&amp;gt;} /&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&amp;lt;/&lt;span style="color:#f92672">Route&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="props">Props&lt;/h2>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Prop Name&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>permissions&lt;/td>
+&lt;td>This is an array of the permission roles that are allowed for the route.&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h2 id="source-code">Source Code&lt;/h2>
+&lt;p>&lt;a href="https://github.com/fireactjs/saas/blob/main/dist/components/PermissionRouter.js">https://github.com/fireactjs/saas/blob/main/dist/components/PermissionRouter.js&lt;/a>&lt;/p></description></item><item><title>Docs: Settings</title><link>https://fireactjs.com/docs/saas-package/components/settings/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://fireactjs.com/docs/saas-package/components/settings/</guid><description>
+&lt;h2 id="overview">Overview&lt;/h2>
+&lt;p>This component is designed to be the component to change the subscription account settings. The component updates the subscription account name. When you build your SaaS application, you should replace this component with your own custom build component if the subscription settings are more than just the account name. For example, if your SaaS is a no-code web application builder, you might have other settings such as domain.&lt;/p>
+&lt;h2 id="screenshot">Screenshot&lt;/h2>
+&lt;p>&lt;img src="screenshot.png" alt="Screenshot">&lt;/p>
+&lt;h2 id="source-code">Source Code&lt;/h2>
+&lt;p>&lt;a href="https://github.com/fireactjs/saas/blob/main/dist/components/Settings.js">https://github.com/fireactjs/saas/blob/main/dist/components/Settings.js&lt;/a>&lt;/p></description></item><item><title>Docs: SubscriptionContext</title><link>https://fireactjs.com/docs/saas-package/components/subscriptioncontext/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://fireactjs.com/docs/saas-package/components/subscriptioncontext/</guid><description>
+&lt;h2 id="overview">Overview&lt;/h2>
+&lt;p>This is the context component to access the subscription account data. See the following example code on how to access the subscription account data.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-jsx" data-lang="jsx">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">const&lt;/span> { &lt;span style="color:#a6e22e">subscription&lt;/span> } &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#a6e22e">useContext&lt;/span>(&lt;span style="color:#a6e22e">SubscriptionContext&lt;/span>);
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">const&lt;/span> &lt;span style="color:#a6e22e">accountName&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#a6e22e">subscription&lt;/span>.&lt;span style="color:#a6e22e">name&lt;/span>&lt;span style="color:#f92672">?&lt;/span>&lt;span style="color:#a6e22e">subscription&lt;/span>.&lt;span style="color:#a6e22e">name&lt;/span>&lt;span style="color:#f92672">:&lt;/span>&lt;span style="color:#e6db74">&amp;#34;&amp;#34;&lt;/span>;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="source-code">Source Code&lt;/h2>
+&lt;p>&lt;a href="https://github.com/fireactjs/saas/blob/main/dist/components/SubscriptionContext.js">https://github.com/fireactjs/saas/blob/main/dist/components/SubscriptionContext.js&lt;/a>&lt;/p></description></item><item><title>Docs: SubscriptionMenu</title><link>https://fireactjs.com/docs/saas-package/components/subscriptionmenu/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://fireactjs.com/docs/saas-package/components/subscriptionmenu/</guid><description>
+&lt;h2 id="overview">Overview&lt;/h2>
+&lt;p>This is the menu component to display the main menu for the subscription account. By default, it contains Dashboard, Settings, Users and Billing. You can add other menu item components by adding them to the &lt;code>customItems&lt;/code> prop.&lt;/p>
+&lt;h2 id="screenshot">Screenshot&lt;/h2>
+&lt;p>&lt;img src="screenshot.png" alt="Screenshot">&lt;/p>
+&lt;h2 id="props">Props&lt;/h2>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Prop Name&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>customItems&lt;/td>
+&lt;td>custom menu item components to be inserted between Dashboard and Settings&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h2 id="source-code">Source Code&lt;/h2>
+&lt;p>&lt;a href="https://github.com/fireactjs/saas/blob/main/dist/components/SubscriptionMenu.js">https://github.com/fireactjs/saas/blob/main/dist/components/SubscriptionMenu.js&lt;/a>&lt;/p></description></item><item><title>Docs: SubscriptionProvider</title><link>https://fireactjs.com/docs/saas-package/components/subscriptionprovider/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://fireactjs.com/docs/saas-package/components/subscriptionprovider/</guid><description>
+&lt;h2 id="overview">Overview&lt;/h2>
+&lt;p>This component is the context provider to load the subscription account data. The subscription account data is accessible to all the nested &lt;!-- raw HTML omitted --> elements so that the subscription data is only loaded once.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-jsx" data-lang="jsx">&lt;span style="display:flex;">&lt;span>&amp;lt;&lt;span style="color:#f92672">Route&lt;/span> &lt;span style="color:#a6e22e">path&lt;/span>&lt;span style="color:#f92672">=&lt;/span>{&lt;span style="color:#a6e22e">pathnames&lt;/span>.&lt;span style="color:#a6e22e">Subscription&lt;/span>} &lt;span style="color:#a6e22e">element&lt;/span>&lt;span style="color:#f92672">=&lt;/span>{&amp;lt;&lt;span style="color:#f92672">SubscriptionProvider&lt;/span> &lt;span style="color:#a6e22e">loader&lt;/span>&lt;span style="color:#f92672">=&lt;/span>{&amp;lt;&lt;span style="color:#f92672">Loader&lt;/span> &lt;span style="color:#a6e22e">size&lt;/span>&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#e6db74">&amp;#34;large&amp;#34;&lt;/span> /&amp;gt;} /&amp;gt;} &amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ...
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&amp;lt;/&lt;span style="color:#f92672">Route&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="props">Props&lt;/h2>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Prop Name&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>loader&lt;/td>
+&lt;td>This is the loader component to be displayed when the application is loading the subscription account data&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h2 id="source-code">Source Code&lt;/h2>
+&lt;p>&lt;a href="https://github.com/fireactjs/saas/blob/main/dist/components/SubscriptionContext.js">https://github.com/fireactjs/saas/blob/main/dist/components/SubscriptionContext.js&lt;/a>&lt;/p></description></item><item><title>Docs: UpdateUser</title><link>https://fireactjs.com/docs/saas-package/components/updateuser/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://fireactjs.com/docs/saas-package/components/updateuser/</guid><description>
+&lt;h2 id="overview">Overview&lt;/h2>
+&lt;p>This component displays a form to allow the admins of the subscription account to update the permissions of a user, or revoke access of the user.&lt;/p>
+&lt;h2 id="props">Props&lt;/h2>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Prop Name&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>user&lt;/td>
+&lt;td>The user object to be updated&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>setSelectedUser&lt;/td>
+&lt;td>The state of UpdateUser component is loaded in the parent component. Set false to unload the component.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>setUsers&lt;/td>
+&lt;td>The state of the user list in the parent component. After a user is invited, the user will be appended to the users state.&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h2 id="source-code">Source Code&lt;/h2>
+&lt;p>&lt;a href="https://github.com/fireactjs/saas/blob/main/dist/components/UpdateUser.js">https://github.com/fireactjs/saas/blob/main/dist/components/UpdateUser.js&lt;/a>&lt;/p></description></item></channel></rss>
