@@ -344,7 +344,7 @@ import { Route } from "react-router-dom";
 import LocalFireDepartmentIcon from '@mui/icons-material/LocalFireDepartment';
 import { CircularProgress, Box } from '@mui/material';
 import authMethods from "./authMethods.json";
-import { CreateSubscription, ListSubscriptions, pathnames as subPathnames, PermissionRouter, Settings, SubscriptionMenu, ListUsers, SubscriptionProvider, ListInvoices, ManagePaymentMethods, ChangePlan, CancelSubscription } from '@firectjs/saas';
+import { CreateSubscription, ListSubscriptions, pathnames as subPathnames, PermissionRouter, Settings, SubscriptionMenu, ListUsers, SubscriptionProvider, ListInvoices, ManagePaymentMethods, ChangePlan, CancelSubscription } from '@fireactjs/saas';
 import SaaSConfig from './config.json';
 
 const Brand = "FIREACT";
