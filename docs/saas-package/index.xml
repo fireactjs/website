@@ -361,7 +361,7 @@ allow read, update, create, delete: if request.auth.uid == userId;
 match /subscriptions/{subscriptionId} {
 allow read: if request.auth.uid != null &amp;amp;&amp;amp; request.auth.uid in resource.data.permissions.access;
 allow update: if request.auth.uid != null &amp;amp;&amp;amp; request.auth.uid in resource.data.permissions.admin &amp;amp;&amp;amp; (!request.resource.data.diff(resource.data).affectedKeys()
-.hasAny([&amp;#39;currency&amp;#39;, &amp;#39;ownerId&amp;#39;, &amp;#39;paymentCycle&amp;#39;, &amp;#39;paymentMethod&amp;#39;, &amp;#39;plan&amp;#39;, &amp;#39;price&amp;#39;, &amp;#39;stripePriceId&amp;#39;, &amp;#39;stripeSubscriptionId&amp;#39;, &amp;#39;subscriptionCreated&amp;#39;, &amp;#39;subscriptionCurrentPeriodEnd&amp;#39;, &amp;#39;subscriptionCurrentPeriodStart&amp;#39;, &amp;#39;subscriptionEnded&amp;#39;, &amp;#39;subscriptionStatus&amp;#39;]));
+.hasAny([&amp;#39;currency&amp;#39;, &amp;#39;ownerId&amp;#39;, &amp;#39;paymentCycle&amp;#39;, &amp;#39;paymentMethod&amp;#39;, &amp;#39;plan&amp;#39;, &amp;#39;price&amp;#39;, &amp;#39;stripeItems&amp;#39;, &amp;#39;stripeSubscriptionId&amp;#39;, &amp;#39;subscriptionCreated&amp;#39;, &amp;#39;subscriptionCurrentPeriodEnd&amp;#39;, &amp;#39;subscriptionCurrentPeriodStart&amp;#39;, &amp;#39;subscriptionEnded&amp;#39;, &amp;#39;subscriptionStatus&amp;#39;]));
 }
 match /subscriptions/{subscriptionId}/invoices/{invoiceId} {
 allow read: if request.auth.uid != null &amp;amp;&amp;amp; request.auth.uid in get(/databases/$(database)/documents/subscriptions/$(subscriptionId)).data.permissions.admin;
