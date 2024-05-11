@@ -1,9 +1,9 @@
 {{ $col_id := .Get "color" | default "dark" }}
 {{/* Height can be one of: auto, min, med, max, full. */}}
 {{ $height := .Get "height" | default "max"  }}
-<section class="row td-cover-block td-cover-block--height-{{ $height }} js-td-cover td-overlay td-overlay--light -bg-{{ $col_id }}">
+<section class="row td-cover-block td-box td-cover-block--height-{{ $height }} js-td-cover td-overlay td-overlay--light -bg-{{ $col_id }}">
   <div class="container td-overlay__inner">
-    <div class="row align-items-end">
+    <div class="row">
       <div class="col-lg-6">
           <h1 class="display-1 mt-0 pb-3">
             <img alt="Fireactjs" width="88" src="images/logo.png" />
