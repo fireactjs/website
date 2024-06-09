@@ -578,7 +578,8 @@ Replace the code in your `/functions/index.js` with the following code.
 const admin = require('firebase-admin');
 admin.initializeApp();
 const config = require('./config.json');
-let fireactjsSaasFunctions =  require('@fireactjs/saas-cloud-functions')(config);
+const functions = require('firebase-functions');
+let fireactjsSaasFunctions =  require('@fireactjs/saas-cloud-functions')({config: config, admin: admin, functions: functions});
 exports.fireactjsSaas = fireactjsSaasFunctions;
 ```
 
