@@ -40,7 +40,7 @@ Create a file called `firebaseConfig.json` in the `/src` folder and copy the `fi
 
 ### Enable authentication methods
 
-After you create your Firebase project, go to the project console and enable the authentication methods you plan to use for your web application. @fireactjs/core supports the following authentication methods:
+After you create your Firebase project, go to the project console and enable the authentication methods you plan to use for your web application (Firebase Console > Project Settings > Build > Authentication > Sign-in method > Sign-in providers). Note that @fireactjs/core supports the following authentication methods:
 
 - Email and password
 - Google
