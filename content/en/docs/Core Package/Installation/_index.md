@@ -67,7 +67,7 @@ Create a file called `authMethods.json` in the `/src` folder and copy the follow
 
 ### Initialize your Firebase project
 
-Run `firebase login` to sign in to your Firebase account and then run `firebase init` to initialize your Firebase project locally.
+Run `firebase login` to sign in to your Firebase account and then run `firebase init` to initialize Firestore for your project locally (select `Firestore: Configure security rules and indexes files for Firestore`)
 
 ### Update Firestore rules
 
@@ -213,4 +213,4 @@ Run `npm run build` to build your app
 
 ### Deploy
 
-Run `firebase init` to initialize your project with Firebase and then run `firebase deploy` to deploy your app to Firebase. If you see a blank screen in your production URL, make sure you set the `build` as the folder in your Firebase settings.
+Run `firebase init` to initialize Firebase hosting for your project (select `Hosting: Configure files for Firebase Hosting and (optionally) set up GitHub Action deploys`) and then run `firebase deploy` to deploy your app to Firebase. If you see a blank screen in your production URL, make sure you set the `build` (and not `public`) as the folder in your Firebase settings (`firebase.json`).
