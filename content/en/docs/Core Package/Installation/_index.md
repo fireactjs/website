@@ -92,13 +92,14 @@ service cloud.firestore {
 Replace the code in your `src/App.js` with the code below.
 
 ```jsx
-import './App.css';
-import firebaseConfig from "./firebaseConfig.json";
 import { pathnames, ActionPages, AppTemplate, AuthProvider, AuthRoutes, FireactProvider, MainMenu, PublicTemplate, ResetPassword, SignIn, SignUp, UserMenu, UserProfile, UserUpdateEmail, UserUpdateName, UserUpdatePassword, UserDelete } from '@fireactjs/core';
 import { BrowserRouter, Routes } from "react-router-dom";
 import { Route } from "react-router-dom";
 import LocalFireDepartmentIcon from '@mui/icons-material/LocalFireDepartment';
 import { CircularProgress, Box } from '@mui/material';
+
+import './App.css';
+import firebaseConfig from "./firebaseConfig.json";
 import authMethods from "./authMethods.json";
 
 const Logo = ({size, color}) => {
