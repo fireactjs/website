@@ -7,7 +7,7 @@ description: >
 ---
 ## Install from NPM
 
-To install the fireactjs-core components, create your Reactjs project first, and then run `npm I @fireactjs/core` to install the components.
+To install the fireactjs-core components, create your Reactjs project first, and then run `npm i @fireactjs/core` to install the components.
 
 ```
 npx create-react-app my-app
