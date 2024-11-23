@@ -7,7 +7,7 @@ description: >
 ---
 ## Install from NPM
 
-To install the fireactjs-core components, create your Reactjs project first, and then run `npm I @fireactjs/core` to install the components.
+To install the fireactjs-core components, create your Reactjs project first, and then run `npm i @fireactjs/core` to install the components.
 
 ```
 npx create-react-app my-app
@@ -40,7 +40,7 @@ Create a file called `firebaseConfig.json` in the `/src` folder and copy the `fi
 
 ### Enable authentication methods
 
-After you create your Firebase project, go to the project console and enable the authentication methods you plan to use for your web application. @fireactjs/core supports the following authentication methods:
+After you create your Firebase project, go to the project console and enable the authentication methods you plan to use for your web application (Firebase Console > Project Settings > Build > Authentication > Sign-in method > Sign-in providers). Note that @fireactjs/core supports the following authentication methods:
 
 - Email and password
 - Google
@@ -67,7 +67,7 @@ Create a file called `authMethods.json` in the `/src` folder and copy the follow
 
 ### Initialize your Firebase project
 
-Run `firebase login` to sign in to your Firebase account and then run `firebase init` to initialize your Firebase project locally.
+Run `firebase login` to sign in to your Firebase account and then run `firebase init` to initialize Firestore for your project locally (select `Firestore: Configure security rules and indexes files for Firestore`)
 
 ### Update Firestore rules
 
@@ -92,13 +92,14 @@ service cloud.firestore {
 Replace the code in your `src/App.js` with the code below.
 
 ```jsx
-import './App.css';
-import firebaseConfig from "./firebaseConfig.json";
 import { pathnames, ActionPages, AppTemplate, AuthProvider, AuthRoutes, FireactProvider, MainMenu, PublicTemplate, ResetPassword, SignIn, SignUp, UserMenu, UserProfile, UserUpdateEmail, UserUpdateName, UserUpdatePassword, UserDelete } from '@fireactjs/core';
 import { BrowserRouter, Routes } from "react-router-dom";
 import { Route } from "react-router-dom";
 import LocalFireDepartmentIcon from '@mui/icons-material/LocalFireDepartment';
 import { CircularProgress, Box } from '@mui/material';
+
+import './App.css';
+import firebaseConfig from "./firebaseConfig.json";
 import authMethods from "./authMethods.json";
 
 const Logo = ({size, color}) => {
@@ -213,4 +214,4 @@ Run `npm run build` to build your app
 
 ### Deploy
 
-Run `firebase init` to initialize your project with Firebase and then run `firebase deploy` to deploy your app to Firebase. If you see a blank screen in your production URL, make sure you set the `build` as the folder in your Firebase settings.
+Run `firebase init` to initialize Firebase hosting for your project (select `Hosting: Configure files for Firebase Hosting and (optionally) set up GitHub Action deploys`) and then run `firebase deploy` to deploy your app to Firebase. If you see a blank screen in your production URL, make sure you set the `build` (and not `public`) as the folder in your Firebase settings (`firebase.json`).

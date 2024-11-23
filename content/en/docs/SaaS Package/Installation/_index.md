@@ -121,7 +121,7 @@ If a plan is no longer available for new users, set its `legacy` property to `tr
 
 ## Setup Stripe Integration
 
-For the cloud functions to receive data from Stripe, you will need to create a webhook endpoint with the cloud function webhook URL `https://firebse-location-project-id.cloudfunctions.net/fireactjsSaas-stripeWebHook`. Please make sure you replace the domain with your actual Firebase project cloud function domain. Once the webhook is created, you will get an endpoint secret which is needed in the configuration file.
+For the cloud functions to receive data from Stripe, you will need to create a webhook endpoint with the cloud function webhook URL `https://firebase-location-project-id.cloudfunctions.net/fireactjsSaas-stripeWebHook`. Please make sure you replace the domain with your actual Firebase project cloud function domain. Once the webhook is created, you will get an endpoint secret which is needed in the configuration file.
 
 The following Stripe events need to be sent to the endpoint:
 
